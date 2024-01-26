@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>web3</title>
+  <link rel="icon" href="./image/nav-imag/favcon.png" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .owl-carousel {
+      position: relative;
+    }
+
+    .owl-dots {
+      display: flex;
+      justify-content: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .owl-dot {
+      width: 16px;
+      height: 16px;
+      margin: 0 5px;
+      border-radius: 50%;
+      background-color: #D6D6D6 !important;
+    }
+
+    .owl-theme .owl-dots .owl-dot.active,
+    .owl-theme .owl-dots .owl-dot:hover {
+      background-color: #869791 !important;
+    }
+
+    .image-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .img-hover-zoom {
+      height: auto;
+      overflow: hidden;
+    }
+  </style>
+
+</head>
+
+<body class="bg-[#F6F5ED]">
+  <div class="container mx-auto px-4 pt-3">
+    <nav class="nav">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto  py-6">
+        <a href="#" class="flex items-center">
+          <img src="logo.webp" class="" alt=" Logo" />
+        </a>
+        <div class="hidden md:flex md:order-2 space-x-8 ">
+          <!-- svg for cart -->
+          <a href="#" class="link-dark" type="button" data-modal-toggle="authentication-modal3"
+            data-modal-target="authentication-modal3" aria-controls="offcanvasRight"><i
+              class="fa-solid fa-bag-shopping fa-xl  pe-2 icon-margin"></i></a>
+          <!-- modal for cart -->
+          <div id="authentication-modal3" tabindex="-1" aria-hidden="true"
+            class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative w-full max-w-md max-h-full">
+              <div
+                class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <a href="#">
+                  <img class="p-8 rounded-t-lg" src="" alt="product image" />
+                </a>
+                <div class="px-5 pb-5">
+                  <a href="#">
+                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                      Best Poplin fiber with little mixup of Lanin
+                    </h5>
+                  </a>
+                  <div class="flex items-center mt-2.5 mb-5">
+                    <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor" viewBox="0 0 22 20">
+                      <path
+                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor" viewBox="0 0 22 20">
+                      <path
+                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor" viewBox="0 0 22 20">
+                      <path
+                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor" viewBox="0 0 22 20">
+                      <path
+                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg class="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                      <path
+                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <span
+                      class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.0</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                    <a href="#"
+                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add
+                      to cart</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!----svg for search---->
+          <a href="#" class="link-dark" type="button" data-modal-target="authentication-modal2"
+            data-modal-toggle="authentication-modal2" aria-controls="offcanvasTop"><i
+              class="fa-solid fa-magnifying-glass mx-md-4 fa-xl "></i></a>
+
+          <!-- modal for search -->
+          <div id="authentication-modal2" tabindex="-1" aria-hidden="true"
+            class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative w-full max-w-md max-h-full">
+              <form>
+                <label for="default-search"
+                  class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                    </svg>
+                  </div>
+                  <input type="search" id="default-search"
+                    class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Search Mockups, Logos..." required />
+                  <button type="submit"
+                    class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Search
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!--svg for signup-->
+          <svg xmlns="http://www.w3.org/2000/svg" data-modal-target="authentication-modal"
+            data-modal-toggle="authentication-modal" width="21" height="21" viewBox="0 0 21 21">
+            <g id="Right_Bar" data-name="Right Bar" transform="translate(-2124 -2665)">
+              <g id="Эллипс_362" data-name="Эллипс 362" transform="translate(2124 2665)" fill="none" stroke="#18191a"
+                stroke-width="1.5">
+                <circle cx="2.5" cy="2.5" r="2.5" stroke="none"></circle>
+                <circle cx="2.5" cy="2.5" r="1.75" fill="none"></circle>
+              </g>
+              <g id="Эллипс_363" data-name="Эллипс 363" transform="translate(2132 2665)" fill="none" stroke="#18191a"
+                stroke-width="1.5">
+                <circle cx="2.5" cy="2.5" r="2.5" stroke="none"></circle>
+                <circle cx="2.5" cy="2.5" r="1.75" fill="none"></circle>
+              </g>
+              <g id="Эллипс_364" data-name="Эллипс 364" transform="translate(2140 2665)" fill="none" stroke="#18191a"
+                stroke-width="1.5">
+                <circle cx="2.5" cy="2.5" r="2.5" stroke="none"></circle>
+                <circle cx="2.5" cy="2.5" r="1.75" fill="none"></circle>
+              </g>
+              <g id="Эллипс_365" data-name="Эллипс 365" transform="translate(2124 2673)" fill="none" stroke="#18191a"
+                stroke-width="1.5">
+                <circle cx="2.5" cy="2.5" r="2.5" stroke="none"></circle>
+                <circle cx="2.5" cy="2.5" r="1.75" fill="none"></circle>
+              </g>
+              <g id="Эллипс_366" data-name="Эллипс 366" transform="translate(2132 2673)" fill="none" stroke="#18191a"
+                stroke-width="1.5">
+                <circle cx="2.5" cy="2.5" r="2.5" stroke="none"></circle>
+                <circle cx="2.5" cy="2.5" r="1.75" fill="none"></circle>
+              </g>
+              <g id="Эллипс_367" data-name="Эллипс 367" transform="translate(2140 2673)" fill="none" stroke="#18191a"
+                stroke-width="1.5">
+                <circle cx="2.5" cy="2.5" r="2.5" stroke="none"></circle>
+                <circle cx="2.5" cy="2.5" r="1.75" fill="none"></circle>
+              </g>
+              <g id="Эллипс_368" data-name="Эллипс 368" transform="translate(2124 2681)" fill="none" stroke="#18191a"
+                stroke-width="1.5">
+                <circle cx="2.5" cy="2.5" r="2.5" stroke="none"></circle>
+                <circle cx="2.5" cy="2.5" r="1.75" fill="none"></circle>
+              </g>
+              <g id="Эллипс_369" data-name="Эллипс 369" transform="translate(2132 2681)" fill="none" stroke="#18191a"
+                stroke-width="1.5">
+                <circle cx="2.5" cy="2.5" r="2.5" stroke="none"></circle>
+                <circle cx="2.5" cy="2.5" r="1.75" fill="none"></circle>
+              </g>
+              <g id="Эллипс_370" data-name="Эллипс 370" transform="translate(2140 2681)" fill="none" stroke="#18191a"
+                stroke-width="1.5">
+                <circle cx="2.5" cy="2.5" r="2.5" stroke="none"></circle>
+                <circle cx="2.5" cy="2.5" r="1.75" fill="none"></circle>
+              </g>
+            </g>
+          </svg>
+          <!-- modal for signup svg -->
+          <div id="authentication-modal" tabindex="-1" aria-hidden="true"
+            class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative w-full max-w-md max-h-full">
+              <!-- Modal content -->
+              <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <button type="button"
+                  class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  data-modal-hide="authentication-modal">
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+                <div class="px-6 py-6 lg:px-8">
+                  <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">
+                    Sign in to our platform
+                  </h3>
+                  <form class="space-y-6" action="#">
+                    <div>
+                      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+                        email</label>
+                      <input type="email" name="email" id="email"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                        placeholder="name@company.com" required />
+                    </div>
+                    <div>
+                      <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+                        password</label>
+                      <input type="password" name="password" id="password" placeholder="••••••••"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                        required />
+                    </div>
+                    <div class="flex justify-between">
+                      <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                          <input id="remember" type="checkbox" value=""
+                            class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                            required />
+                        </div>
+                        <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember
+                          me</label>
+                      </div>
+                      <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
+                    </div>
+                    <button type="submit"
+                      class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Login to your account
+                    </button>
+                    <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+                      Not registered?
+                      <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button data-collapse-toggle="navbar-cta" type="button"
+          class="inline-flex items-center justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          aria-controls="navbar-cta" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="mx-2 w-5 h-5 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+          <ul class="flex flex-col text-xl font-medium p-4 md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0">
+            <li>
+              <a href="index.html"
+                class="block py-2 pl-3 pr-4 text-black hover:bg-gray-100  md:hover:text-gray-400 md:p-0 md:dark:hover:text-gray-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent rounded-t-lg active group cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75 "
+                aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="about.html"
+                class="block py-2 pl-3 pr-4 text-black hover:bg-gray-100  md:hover:text-gray-400 md:p-0 md:dark:hover:text-gray-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent rounded-t-lg active group cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75 ">About</a>
+            </li>
+            <li>
+              <a href="shop.html"
+                class="block py-2 pl-3 pr-4 text-black hover:bg-gray-100  md:hover:text-gray-400 md:p-0 md:dark:hover:text-gray-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent rounded-t-lg active group cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75 ">Shop</a>
+            </li>
+            <li>
+              <a href="contact.html"
+                class="block py-2 pl-3 pr-4 text-black hover:bg-gray-100  md:hover:text-gray-400 md:p-0 md:dark:hover:text-gray-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent rounded-t-lg active group cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75 ">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!--------------------------------carousel----------------------------------->
+  <div class="owl-carousel owl-theme owl-loaded lg:max-w-screen flex-col px-4">
+    <div class="owl-stage-outer">
+      <div class="owl-stage">
+        <div class="owl-item">
+          <a href="#">
+            <img class="w-full object-cover"
+              src="//fabric.axiomthemes.com/wp-content/uploads/2022/09/portfolio-image35.jpg" class="lg:h-[400px]"
+              alt="">
+            <div class="image-text ">
+              <P class="text-sm uppercase text-center">We make made to measure curtains + blinds </P>
+              <p class="text-xl md:text-3xl lg:text-5xl text-center leading-snug">Sign up and receive 10% off<br>your
+                first purchase!</p>
+            </div>
+          </a>
+        </div>
+        <div class="owl-item">
+          <a href="#">
+            <img class="w-full object-cover"
+              src="//fabric.axiomthemes.com/wp-content/uploads/2022/09/portfolio-image37.jpg" class="lg:h-[400px]"
+              alt="">
+            <div class="image-text">
+              <P class="text-sm uppercase text-center">We make made to measure curtains + blinds </P>
+              <p class="text-xl md:text-3xl lg:text-5xl  text-center leading-snug">Sign up and receive 10% off<br>your
+                first purchase!</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center  pt-8 mx-auto px-4">
+    <div class="upcont">
+      <button type="button"
+        class="py-2 px-8 me-2 mb-2 text-sm font-medium text-white text-white-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 text-white-700 hover:text-white-700 focus:z-10 focus:ring-4 focus:ring-red-200 dark:focus:ring-gray-700 dark:bg-red-800 dark:text-white-400 color-white uppercase">Fashion</button>
+      <br>
+      <h1 class="lg:text-6xl sm:lg font-semi-bold font-sans">The Classic Tux is Never Out of <br>Style</h1>
+      <div class="icons space-x-4 inline-flex pt-5 ">
+        <span><img src="user-circle-solid-24.png"></span><span class="hover:text-red-700">TRX_ADMIN</span><span
+          class="opacity-50">August 4,2022</span> <span class="opacity-50">0 Comments</span>
+      </div>
+    </div>
+    <div class="lowcont  lg:ml-60 lg:mr-60">
+      <p class="text-medium font-sans"><span class="text-6xl">Q</span> faucibus nec mauris a sodales, sed elementum mi
+        tincidunt. Sed </p>
+      <p class=" text-medium font-sans"> viverra egestas nisi in consequat. Fusce sodales augue a </p>
+      <p class="text-medium text-justify"> Cras sollicitudin, ipsum eget blandit pulvinar. Integer tincidunt. Cras
+        dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+        consequat vitae, eleifend ac, enim.</p>
+      <br>
+      <p class=" text-medium font-sans text-justify">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi
+        architecto beatae vitae dicta sunt, explicabo.</p>
+      <br>
+      <h2 class=" lg:text-left sm:text-center text-2xl font-bold">At vero eos et accusam</h2>
+      <br>
+      <P class="text-medium font-sans text-justify">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi
+        architecto beatae vitae dicta sunt.</P>
+    </div>
+  </div>
+  <div class="container mx-auto ">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-10">
+      <div class="col-1 px-4">
+        <div class="mb-6 md:mb-0">
+          <a href="#" class="flex items-center justify-center md:justify-start">
+            <img class="w-full" src="portfolio-image8-1536x1024.jpg">
+          </a>
+        </div>
+      </div>
+      <div class="col-2 px-4">
+        <a href="#" class="flex items-center justify-center md:justify-start">
+          <img class="w-full" src="post-image1-1536x1024.jpg">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="lowcont text-center lg:ml-60 lg:mr-60 mt-16 px-4 mx-auto">
+    <p class=" text-medium font-sans text-justify">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
+      accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi
+      architecto beatae vitae dicta sunt, explicabo.Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
+      accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi
+      architecto beatae vitae dicta sunt, explicabo</p>
+    <br>
+    <p class=" text-medium font-sans text-justify">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
+      accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi
+      architecto beatae vitae dicta sunt, explicaboSed ut perspiciatis, unde omnis iste natus error sit voluptatem
+      accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi
+      architecto beatae vitae dicta sunt, explicabo.</p>
+    <br>
+    <P class="text-medium font-sans text-justify">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
+      accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi
+      architecto beatae vitae dicta sunt Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium
+      doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae
+      vitae dicta sunt, explicabo.</P>
+    <br>
+    <h3 class=" lg:text-left sm:text-center text-2xl font-bold">Creative approach to every project.</h3>
+    <br>
+    <P class="text-medium font-sans text-justify mb-5">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
+      accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi
+      architecto beatae vitae dicta sunt Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium
+      doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae
+      vitae dicta sunt, explicabo.</P>
+  </div>
+  <div class="container mx-auto  px-4">
+    <img class="px-4" src="post-image2-1536x1024.jpg">
+    <p class="opacity-50 text-medium ml-4">Stet clita kasd gubergren, no sea sanctus est labore et dolore. By <span
+        class="opacity-1 font-bold">Kevin Smith</span> </p>
+  </div>
+
+  <div class="lowcont text-center lg:ml-60 lg:mr-60   mt-16 px-4">
+
+    <p class=" text-medium font-sans text-justify">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
+      accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi
+      architecto beatae vitae dicta sunt, explicabo.Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
+      accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi
+      architecto beatae vitae dicta sunt, explicabo</p>
+    <br>
+    <p class=" text-medium font-sans text-justify mb-5">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
+      accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi
+      architecto beatae vitae dicta sunt, explicaboSed ut perspiciatis, unde omnis iste natus error sit voluptatem
+      accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi
+      architecto beatae vitae dicta sunt, explicabo.</p>
+    <div class="btns border-b-4 border-black-900 py-8 mb-8">
+      <button type="button"
+        class="text-black-700 bg-white  border border-white-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-none text-sm px-5 py-2.5 text-center me-2 mb-2 text-black dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Businees</button>
+      <button type="button"
+        class="text-black-700 bg-white  border border-white-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-none text-sm px-5 py-2.5 text-center me-2 mb-2 text-black dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Design</button>
+      <button type="button"
+        class="text-black-700 bg-white  border border-white-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-none text-sm px-5 py-2.5 text-center me-2 mb-2 text-black dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Industry</button>
+      <button type="button"
+        class="text-black-700 bg-white  border border-white-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-none text-sm px-5 py-2.5 text-center me-2 mb-2 text-black dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Tailoring</button>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-10 mb-9">
+      <div class="col-1 px-4">
+        <h1 class="lg:text-3xl sm:lg font-semi-bold font-serif">How to Choose the Right Fabric for Shirts</h1>
+
+
+      </div>
+      <div class="col-2 px-4 mb-8">
+        <h1 class="lg:text-3xl sm:lg font-semi-bold font-serif">Men’s Clothing Items Selection Autumn 2022</h1>
+      </div>
+      <h1 class=" lg:text-3xl sm:text-lg font-semi-bold lg:text-left sm:text-center ">Leave a comment</h1>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-10 mb-9">
+
+
+      <div class="col-1 px-4 border-b-4 border-black-900 py-4">
+
+        <h2 class="lg:text-left sm:text-center text-medium">Your Name *</h2>
+      </div>
+      <div class="col-2 px-4  border-b-4 border-black-900 py-4">
+        <h2 class="lg:text-left sm:text-center text-medium">Your E-mail *</h2>
+      </div>
+    </div>
+
+    <div class="container inline-flex">
+
+      <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+          style="fill: rgba(0, 0, 0, 0.31);">
+          <path
+            d="M7 5c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2H7zm0 12V7h10l.002 10H7z">
+          </path>
+        </svg></span>
+      <p class="opacity-50 mb-8">Save my name, email, and website in this browser for the next time I comment website in
+        this browser for the next time I comment .</p>
+    </div>
+    <div class="container mx-auto px-4">
+      <p class="opacity-50 mb-8 lg:text-left sm:text-center border-b-4 border-black-900 py-4">Your Comment *</p>
+      <button type="button"
+        class=" bg-yellow-600  border border-white-700  focus:ring-4 focus:outline-none focus:ring-blue-300 font-lg font-bold rounded-none text-sm px-16 py-2.5 text-center me-2 mb-2 text-white mb-9">Leave
+        a Comment</button>
+      <h1 class="lg:text-3xl sm:lg font-semi-bold font-serif">You May also Like</h1>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-10 mb-9 px-4">
+      <div class="col-1 px-4">
+        <img class="w-full object-cover  mb-2" src="post-image2-1536x1024.jpg">
+        <div class="test lg:text-start sm:text-center">
+          <h3 class="text-lg font-semi-bold uppercase mb-3">Fashion</h3>
+          <h1 class="text-xl font-semi-bold">Custom Ties Offer <br> Affordable Luxury</h1>
+        </div>
+      </div>
+      <div class="col-2 px-4 mb-8">
+        <img class="w-full object-cover mb-2" src="post-image1-1536x1024.jpg">
+        <div class="test lg:text-start sm:text-center">
+          <h3 class="text-lg font-semi-bold uppercase mb-3">Fashion</h3>
+          <h1 class="text-xl font-semi-bold">Three step to creating the <br> Perfect Suit</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-black py-10 mt-14 ">
+    <div class="container w-full mx-auto max-w-screen-xl p-4 py-6 lg:py-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 ">
+        <div class="col-1">
+          <div class="mb-6 md:mb-0">
+            <a href="#" class="flex items-center justify-center md:justify-start">
+              <img src="https://fabric.axiomthemes.com/wp-content/uploads/2022/08/logo-combine-l.png" class="h-10 mr-3"
+                alt="FlowBite Logo" />
+            </a>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="text-white text-center md:text-start font-medium text-3xl md:text-5xl cursor-pointer">
+            <h1>
+              We Develop & Create
+            </h1>
+            <h1 class="lg:pt-7 pt-0">
+              Modern Textile Products
+            </h1>
+          </div>
+          <div class="grid grid-cols-3 pt-8 text-center md:text-start">
+            <div class="col-1">
+              <h2 class="mb-6 text-xl font-medium text-white ">
+                Socials
+              </h2>
+              <ul class="text-[#727272] text-xl pt-5">
+                <li class="mb-4">
+                  <a href="https://flowbite.com/" class="hover:underline">Facebook</a>
+                </li>
+                <li class="mb-4">
+                  <a href="https://tailwindcss.com/" class="hover:underline">Twitter</a>
+                </li>
+                <li class="mb-4">
+                  <a href="https://tailwindcss.com/" class="hover:underline">Dribble</a>
+                </li>
+                <li class="mb-4">
+                  <a href="https://tailwindcss.com/" class="hover:underline">Instagram</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-2">
+              <h2 class="mb-6 text-xl font-medium text-white hover:underline">
+                Menu
+              </h2>
+              <ul class="text-[#727272] text-xl pt-5">
+                <li class="mb-4">
+                  <a href="https://github.com/themesberg/flowbite" class="hover:underline">Home</a>
+                </li>
+                <li class="mb-4">
+                  <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">About</a>
+                </li>
+                <li class="mb-4">
+                  <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Shop</a>
+                </li>
+                <li class="mb-4">
+                  <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Content</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-3">
+              <h2 class="mb-6 text-xl font-medium text-white hover:underline">
+                Say hello
+              </h2>
+              <ul class="text-[#d2d3d5] font-extrabold text-xl pt-5">
+                <li class="mb-4 cursor-pointer  ">
+                  <a href="#" class="font-medium hover:underline opacity-50 hidden lg:block">info@gmail.com</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 border-[#d2d3d5] sm:mx-auto lg:my-8" />
+      <div class="sm:flex sm:items-center sm:justify-between text-center">
+        <span class="text-xl text-[#d2d3d5] sm:text-center">AxiomThemes
+          <a href="https://flowbite.com/" class="hover:underline">© 2023 </a>.
+          All Rights Reserved.
+        </span>
+      </div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <script>
+    var cont = 0;
+    function loopSlider() {
+      var xx = setInterval(function () {
+        switch (cont) {
+          case 0: {
+            $("#slider-1").fadeOut(400);
+            $("#slider-2").delay(400).fadeIn(400);
+            $("#sButton1").removeClass("bg-gray-500");
+            $("#sButton2").addClass("bg-gray-500");
+            cont = 1;
+
+            break;
+          }
+          case 1: {
+            $("#slider-2").fadeOut(400);
+            $("#slider-1").delay(400).fadeIn(400);
+            $("#sButton2").removeClass("bg-gray-500");
+            $("#sButton1").addClass("bg-gray-500");
+
+            cont = 0;
+
+            break;
+          }
+        }
+      }, 8000);
+    }
+
+    function reinitLoop(time) {
+      clearInterval(xx);
+      setTimeout(loopSlider(), time);
+    }
+
+    function sliderButton1() {
+      $("#slider-2").fadeOut(400);
+      $("#slider-1").delay(400).fadeIn(400);
+      $("#sButton2").removeClass("bg-gray-500");
+      $("#sButton1").addClass("bg-gray-500");
+      reinitLoop(4000);
+      cont = 0;
+    }
+
+    function sliderButton2() {
+      $("#slider-1").fadeOut(400);
+      $("#slider-2").delay(400).fadeIn(400);
+      $("#sButton1").removeClass("bg-gray-500");
+      $("#sButton2").addClass("bg-gray-500");
+      reinitLoop(4000);
+      cont = 1;
+    }
+
+    $(window).ready(function () {
+      $("#slider-2").hide();
+      $("#sButton1").addClass("bg-gray-500");
+
+      loopSlider();
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.owl-carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        smartSpeed: 1000,
+        responsiveClass: true,
+      });
+
+      $(".img-slide").hover(function () {
+        $(this).find(".accessories").toggleClass("accessories-add");
+        $(this).find(".shop-now").toggleClass("shop-add");
+      });
+    });
+  </script>
+</body>
+
+</html>
